@@ -1,0 +1,6 @@
+### Add it to dockerfile (problem in sqlalchemy-utils)
+cd /lib/python3.8/site-packages/
+git clone git://github.com/kvesteri/sqlalchemy-utils.git
+cd sqlalchemy-utils
+pip install -e .
+###

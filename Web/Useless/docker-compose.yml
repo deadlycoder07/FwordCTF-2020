@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  task:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: docker_task
+    volumes:
+      - "./task:/opt/initializer/app"
+    restart: unless-stopped
+    networks:
+      - task4
+    ports:
+      - "0.0.0.0:80:80"
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres
+    container_name: db_task4
+    environment:
+      POSTGRES_DB: fword_ctf
+      POSTGRES_USER: kahla
+      POSTGRES_PASSWORD: kahlakahlakahla
+    volumes:
+      - "./data:/var/lib/postgresql/data"
+    restart: unless-stopped
+    networks:
+      - task4
+networks:
+  task4:

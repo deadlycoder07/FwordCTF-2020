@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  mongo:
+    image: mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: kahla
+      MONGO_INITDB_ROOT_PASSWORD: YouWillN3verguessTh1sSh1tFwordFtw
+  node:
+    build:
+      dockerfile: docker/node/Dockerfile
+      context: .
+    restart: unless-stopped
+    ports:
+      - "0.0.0.0:80:8000"
+    depends_on:
+      - mongo

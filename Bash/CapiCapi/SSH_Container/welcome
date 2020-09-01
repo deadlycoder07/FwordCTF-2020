@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -en "DISCLAIMER: Please don't abuse the server !\n\n"
+echo -en "Author: Kahla, Contact me for any problems, GL & HF\n\n"
+
