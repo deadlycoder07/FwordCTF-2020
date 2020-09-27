@@ -1,1 +1,1 @@
-## Credits go to our teammate [https://twitter.com/KOOLIAymen](KOOLI) for these amazing scripts ##
+## Credits go to our teammate [KOOLI](https://twitter.com/KOOLIAymen) for these amazing scripts ##
